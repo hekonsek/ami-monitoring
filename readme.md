@@ -21,4 +21,4 @@ $ aws ec2 run-instances --region=us-east-1 --image-id ami-0a3fb87f415c833b9 --in
 
 ## License
 
-This project is distributed under Apache 2 license.
+This project is distributed under [Apache 2.0 license](http://www.apache.org/licenses/LICENSE-2.0.html).
