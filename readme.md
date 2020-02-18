@@ -1,20 +1,21 @@
 # Monitoring AMI
 
-Golden AMI image of monitoring machine.
+Golden AMI image for the monitoring machine.
 
 Image includes:
 - Prometheus server
-  - collecting metrics for monitoring machine itself
+  - collecting metrics for the monitoring machine itself
   - EC2 service discovery
+- Grafana server
 - Docker server
 
 ## Usage
 
-Current version of Kafka AMI is `0.2.0` (AMI id `ami-0a3fb87f415c833b9`). In order to create new Kafka EC2 instance
+Current version of Kafka AMI is `0.3.0` (AMI id `ami-07a0a263711b54ac0`). In order to create new Kafka EC2 instance
 execute the following AWS CLI command:
 
 ```
-$ aws ec2 run-instances --region=us-east-1 --image-id ami-0a3fb87f415c833b9 --instance-type m5.large \\ 
+$ aws ec2 run-instances --region=us-east-1 --image-id ami-07a0a263711b54ac0 --instance-type m5.large \\ 
   --tag-specifications='ResourceType=instance,Tags=[{Key=Name,Value=monitoring}]' \\
   --key-name default
 ```
